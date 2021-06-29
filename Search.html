@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnavleft">
+        <img class="logo-image" src="img/image1.png" style="width:10%;height:10%">
+        <img src="img/title3.PNG" alt="Title" style="width:20%;height:50%">
+        <a href="About.html">ABOUT US</a>
+        <a href="Stats.html">STATS</a>
+        <a href="Search.html">SEARCH</a>
+        <a href="index.html">HOME</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <form>
+        <div class="searchzip" style=" text-align:center">
+           <h3> <label for="Zipcode"><strong>Zipcode:</strong></label><br></h3>
+            <input type="text" id="Zipcode" name="Zipcode"><br><br>
+            <button type="button">Search</button>
+            <button type="button">Create New</button>
+        </div>
+    </form>
+    <script>
+        function myFunction() {
+            document.getElementById("Zipcode").value = document.getElementById("field1").value;
+        }
+    </script>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h3><strong>Hospitals</strong></h3>
+    <table>
+        <tr>
+            <th>State</th>
+            <th>Hospital Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>Beds Available</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+        <tr>
+            <td>FL</td>
+            <td>BAPTIST HOSPITAL OF MIAMI</td>
+            <td>1611 NW 12TH AVE</td>
+            <td>MIAMI</td>
+            <td>33136</td>
+            <td>9524</td>
+            <td>-80.214945</td>
+            <td>25.790612</td>
+            <td><button type="button">Update</button></td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+        <tr>
+            <td>FL</td>
+            <td>NORTH OKALOOSA MEDICAL CENTER</td>
+            <td>1475 NW 12TH AVE</td>
+            <td>MIAMI</td>
+            <td>33136</td>
+            <td>3717</td>
+            <td>-80.214931</td>
+            <td>25.788451</td>
+            <td><button type="button">Update</button></td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+        <tr>
+            <td>FL</td>
+            <td>KENDALL REGIONAL MEDICAL CENTER</td>
+            <td>5200 NE 2ND AVE</td>
+            <td>MIAMI</td>
+            <td>33136</td>
+            <td>224</td>
+            <td>-80.191767</td>
+            <td>25.822972</td>
+            <td><button type="button">Update</button></td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+    </table>
+    <style>
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 16%;
+            left: 0;
+            bottom: 0;
+            background-color: cadetblue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <footer>
+        <div class="row">
+            <div class="col-lg-7">
+                <h4 class="white-text"><b>Acknowledgement</b></h4>
+                <h5 class="grey-text text-lighten-10s"></h5>
+                <p>
+                    This is a demo website created as part of a class project for the <br>
+                    <b>Distributed Information Systems course ISM6225.020S21</b>.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading"><b></b></h5>
+                    <address>
+                        <strong>University of South Florida</strong><br>
+                        MUMA School of Business<br>
+                        Information Systems Management<br>
+                        Tampa, Florida, US,<br>
+                        <a target="_blank" href="https://www.usf.edu/">www.usf.edu</a>
+                    </address>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="widget">
+                    <h5 class="widgetheading"><b>Quick Links</b></h5>
+                    <ul class="link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Search.html">Search</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Stats.html">Stats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
