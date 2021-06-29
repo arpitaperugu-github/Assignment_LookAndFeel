@@ -1,1 +1,119 @@
-<!--Your HTML code here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div class="topnavleft">
+        <img class="logo-image" src="img/image1.png" alt="Logo" style="width:10%;height:10%">
+        <img src="img/title3.PNG" alt="Title" style="width:20%;height:50%">
+        <a href="About.html">ABOUT US</a>
+        <a href="Stats.html">STATS</a>
+        <a href="Search.html">SEARCH</a>
+        <a href="index.html">HOME</a>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img class="img-responsive" src="img/img7.png">
+            <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+
+            <img class="img-responsive" src="img/img2.png">
+            <div class="text"></div>
+        </div>
+        <div class="mySlides fade">
+            <img class="img-responsive" src="img/img3.png">
+            <div class="text"></div>
+        </div>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--Footer-->
+    <style>
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 16%;
+            left: 0;
+            bottom: 0;
+            background-color: cadetblue;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <footer>
+        <div class="row">
+            <div class="col-lg-7">
+                <h4 class="white-text"><b><br>Acknowledgement</b></h4>
+                <h5 class="grey-text text-lighten-10s"></h5>
+                <p>
+                    This is a demo website created as part of a class project for the <br>
+                    <b>Distributed Information Systems course ISM6225.020S21</b>.
+                </p>
+            </div>
+            <div class="col-lg-3">
+                <div class="widget">
+                    <h5 class="widgetheading"><b></b></h5>
+                    <address>
+                        <strong>University of South Florida</strong><br>
+                        MUMA School of Business<br>
+                        Information Systems Management<br>
+                        Tampa, Florida, US<br>
+                        <a target="_blank" href="https://www.usf.edu/">www.usf.edu</a>
+                    </address>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="widget">
+                    <h5 class="widgetheading"><b>Quick Links</b></h5>
+                    <ul class="link-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Search.html">Search</a></li>
+                        <li><a href="About.html">About Us</a></li>
+                        <li><a href="Stats.html">Stats</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+</script>
